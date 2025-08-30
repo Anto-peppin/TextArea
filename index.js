@@ -1,9 +1,20 @@
 let area = document.querySelector('textarea')
 let total = document.querySelector('.number')
 let remaining = document.querySelector('.remaining')
+let body = document.querySelector('body')
 area.addEventListener('input',(e)=>{
 let numberOfCharecters = e.target.value.length
-total.innerHTML = numberOfCharecters
+if(numberOfCharecters>200){
+    area.value = area.value.slice(0,200)
+
+        let limit = document.createElement('div')
+    limit.id = 'limit'
+    limit.innerText = 'You are Reached the limit'
+body.appendChild(limit)
+
+}
+else{
+    total.innerHTML = numberOfCharecters
 switch(true ){
     case (numberOfCharecters <=50): 
     total.style.color = 'green'
@@ -39,5 +50,6 @@ switch(true ){
 
 }
 
+}
 
 })

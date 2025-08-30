@@ -6,6 +6,7 @@
 body{
     width: 100%;
     height: 100dvh;
+    position: relative;
 }
 .container{
     width: 60%;
@@ -51,6 +52,30 @@ textarea{
     }
     .container{
         width: 90%;
+    }
+    
+}
+#limit{
+    padding: 5px 10px;
+    position: fixed;
+    top: 10px;
+    z-index: 100;
+    background-color: rgba(10, 10, 10, 0.623);
+   left: 50%;
+   transform: translateX(-50%);
+   color: white;
+   border-radius: 10px;
+animation: entry 2s linear forwards;
+}
+@keyframes entry {
+    0%{
+        top: -100%;
+    }
+    30%,70%{
+ top: 20px;
+    }
+    100%{
+  top: -100%;
     }
     
 }
