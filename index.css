@@ -46,6 +46,9 @@ textarea{
     font-family: sans-serif;
     resize: none;
 }
+textarea:focus,textarea:hover{
+    box-shadow:  0 0 5px rgb(66, 141, 192);
+}
 @media (max-width:508px) {
     .info p{
         font-size: 1em; 
@@ -56,6 +59,7 @@ textarea{
     
 }
 #limit{
+    min-width: max-content;
     padding: 5px 10px;
     position: fixed;
     top: 10px;
